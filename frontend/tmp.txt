@@ -1,0 +1,28 @@
+// tracks && (
+    //     tracks.map((track, id) => (
+    //         <Paper
+    //             component={Box}
+    //             // component={Link}
+    //             // to={'/tracks?track=' + track._id}
+    //             p={2}
+    //             key={track._id}
+    //             className={classes.margin}
+    //         >
+    //             <Grid container>
+    //                 <Grid item className={classes.text}>
+    //                     <Typography variant="h4">{track.artist.name}</Typography>
+    //                     <Typography variant="body1">Название альбома: {track.name}</Typography>
+    //                     <Typography variant="body1">Год выпуска: {track.year}</Typography>
+    //                     <Typography variant="body1">Количество треков: {track.year}</Typography>
+    //
+    //                 </Grid>
+    //                 <Grid container item justifyContent={"flex-end"}>
+    //                     <IconButton component={Link} to={'/tracks?track=' + track._id}>
+    //                         <ArrowForwardIcon />
+    //                     </IconButton>
+    //                 </Grid>
+    //             </Grid>
+    //         </Paper>
+    //     ))
+    //
+    // );
