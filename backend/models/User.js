@@ -44,6 +44,7 @@ const UserSchema = new mongoose.Schema({
         required: true,
     },
     facebookId: String,
+    image: String,
 });
 
 UserSchema.pre('save', async function (next) {

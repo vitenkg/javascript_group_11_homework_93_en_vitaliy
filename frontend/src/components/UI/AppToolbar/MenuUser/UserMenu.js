@@ -22,7 +22,7 @@ const UserMenu = ({user}) => {
         <>
             <Button component={Link} to="/track_history" color="inherit">History Track | </Button>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} color="inherit">
-                {avatar ? <img src={avatar}/> : null}  Hello, {user.displayName}!
+                {avatar ? <img src={avatar} width="50" height="50"/> : null}  Hello, {user.displayName}!
             </Button>
             <Menu
                 id="simple-menu"

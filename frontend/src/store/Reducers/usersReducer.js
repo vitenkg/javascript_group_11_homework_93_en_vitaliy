@@ -5,6 +5,7 @@ import {
   REGISTER_USER_FAILURE,
   REGISTER_USER_SUCCESS
 } from "../Actions/usersActions";
+import {apiURL} from "../../config";
 
 const initialState = {
   user: null,
@@ -23,11 +24,15 @@ const usersReducer = (state = initialState, action) => {
     case LOGIN_USER_REQUEST:
       return {...state, loginLoading: true};
     case LOGIN_USER_SUCCESS:
-      return {...state, user: action.payload, loginError: null, loginLoading: false};
+      let image = null;
+      if (action.payload.image) {
+        image = apiURL + '/uploads/' + action.payload.image;
+      }
+      return {...state, user: action.payload, loginError: null, loginLoading: false, avatar: image};
     case LOGIN_USER_FAILURE:
       return {...state, loginError: action.payload, loginLoading: false};
     case LOGOUT_USER:
-      return {...state, user: null};
+      return {...state, user: null, avatar: null};
     case AVATAR_USER:
       console.log(action.payload);
       return {...state, avatar: action.payload};

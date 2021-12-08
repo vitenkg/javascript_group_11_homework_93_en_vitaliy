@@ -33,7 +33,7 @@ const Register = () => {
     email: '',
     password: '',
     displayName: '',
-    avatar: null,
+    image: null,
   });
 
   const inputChangeHandler = e => {
@@ -125,10 +125,10 @@ const Register = () => {
           <Grid item xs={12}>
             <TextField
                 type="file"
-                name="avatar"
+                name="image"
                 onChange={fileChangeHandler}
-                error={Boolean(getFieldError('avatar'))}
-                helperText={getFieldError('avatar')}
+                error={Boolean(getFieldError('image'))}
+                helperText={getFieldError('image')}
             />
           </Grid>
 
